@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chronova | Cart</title>
+    <style>
+        body{
+            background-color:black;
+            justify-content: space-around;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+            transition: color 0.5s;
+            padding: 30px;
+            border-radius:15px;
+        }
+
+        nav a:hover{
+            color:rgba(114, 112, 112, 0.925);
+            background-color: #111
+        }
+
+        nav a:active{
+            background-color: #1A1A1A;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        hr{
+            border: none;
+            height: 2px;
+            background-color: white;
+        }
+
+        h1{color:white;}
+        p{color:white;}
+
+        .btn {
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            padding: 6px 12px;   
+            border: solid white 2px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            color: rgba(114, 112, 112, 0.925);
+            background-color: #1e1e1e;
+        }
+
+        .btn:active{
+            background: #1A1A1A;
+        }
+
+        .nav1{
+            background-color:black;
+            justify-content: center;
+        }
+
+        .nav1 select{
+            background-color: black;
+            color:white;
+            transition: color 0.3s, background-color 0.3s;
+            border: none;
+            border-radius: 15px;
+            width: 140px;
+            margin-right: 20px;
+        }
+
+        .nav1 select:hover{
+            color:#727070ed;
+            background-color: #1e1e1e;
+            cursor:pointer;
+        }
+
+        .cart-container{
+            margin: 40px;
+            border: solid white 2px;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .cart-item{
+            border: solid white 2px;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .qty-controls{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .qty-number{
+            color: white;
+            font-size: 18px;
+        }
+
+        .total-box{
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Chronova</h1>
+    <a href="index.html">Home</a>
+    <a href="index.html#product">Products</a>
+    <a href="returns.html">Returns</a>
+    <a href="mycart.html">My cart (<span id="cartCount">0</span>)</a>
+    <button class="btn">Sign up</button>      
+    <button class="btn">Log In</button>   
+</nav>
+
+<hr>
+
+<nav class="nav1">
+    <select><option selected>Headphones</option></select>
+    <select><option selected>Smart-watches</option></select>
+    <select><option selected>Ear buds</option></select>
+    <select><option selected>Speakers</option></select>
+    <select><option selected>AI assistant box</option></select>
+    <select><option selected>Gaming</option></select>
+    <select><option selected>LED Lighting</option></select>
+</nav>
+
+<hr>
+
+<h1 style="text-align:center;">My Cart</h1>
+
+<div class="cart-container" id="cart"></div>
+
+<div class="total-box">
+    <h1>Total: ₹<span id="totalPrice">0</span></h1>
+    <button class="btn" onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+function loadCart(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartDiv = document.getElementById("cart");
+    let total = 0;
+    let count = 0;
+
+    cartDiv.innerHTML = "";
+
+    if(cart.length === 0){
+        cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+    }
+
+    cart.forEach(item => {
+        total += item.price * item.qty;
+        count += item.qty;
+
+        cartDiv.innerHTML += `
+            <div class="cart-item">
+                <h1>${item.name}</h1>
+                <p>Price: ₹${item.price}</p>
+
+                <div class="qty-controls">
+                    <button class="btn" onclick="decreaseQty(${item.id})">-</button>
+                    <span class="qty-number">${item.qty}</span>
+                    <button class="btn" onclick="increaseQty(${item.id})">+</button>
+                </div>
+            </div>
+        `;
+    });
+
+    document.getElementById("totalPrice").innerText = total;
+    document.getElementById("cartCount").innerText = count;
+}
+
+function increaseQty(id){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let item = cart.find(p => p.id === id);
+    if(item){
+        item.qty += 1;
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+function decreaseQty(id){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let index = cart.findIndex(p => p.id === id);
+
+    if(index !== -1){
+        cart[index].qty -= 1;
+        if(cart[index].qty <= 0){
+            cart.splice(index, 1);
+        }
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+function checkout(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if(cart.length === 0){
+        alert("Your cart is empty!");
+        return;
+    }
+
+    if(confirm("Are you sure you want to checkout?")){
+        alert("Checkout successful! Thank you for shopping with Chronova.");
+        localStorage.removeItem("cart");
+        loadCart();
+    }
+}
+
+loadCart();
+</script>
+
+</body>
+</html>
