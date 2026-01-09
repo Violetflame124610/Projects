@@ -44,7 +44,7 @@ CSS3 (if linked)
 
 JavaScript (if linked)
 
-🎯 Purpose of the Project
+##🎯 Purpose of the Project
 
 Practice multi-page website design
 
@@ -54,7 +54,7 @@ Simulate a basic e-commerce workflow
 
 Improve front-end development skills
 
-📌 Notes
+##📌 Notes
 
 This is a front-end only project
 
@@ -62,11 +62,11 @@ No backend or database integration
 
 Designed for learning and demonstration purposes
 
-📜 License
+##📜 License
 
 This project is open-source and available for educational use.
 
-👤 Author
+##👤 Author
 
 Violetflame124610
 
