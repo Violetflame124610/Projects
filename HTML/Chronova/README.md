@@ -73,3 +73,10 @@ Violetflame124610
 Last Modified,
 Time-7:34PM
 Date-09/01/2026
+
+## Screenshots
+<img width="1849" height="891" alt="Screenshot 2026-01-09 201021" src="https://github.com/user-attachments/assets/0a7ae01d-2712-4a07-8c12-1b25a7e18f26" />
+<img width="1812" height="819" alt="Screenshot 2026-01-09 201041" src="https://github.com/user-attachments/assets/362a663b-ca6e-4feb-9cb0-d28c92b37b66" />
+<img width="1810" height="533" alt="Screenshot 2026-01-09 201054" src="https://github.com/user-attachments/assets/91c2b599-0776-4afe-baa6-bdc5bd08000b" />
+
+
