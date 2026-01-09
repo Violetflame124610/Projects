@@ -5,9 +5,10 @@ Chronova is a front-end web project designed to simulate an e-commerce experienc
 ## 📁 Project Structure
 HTML/
 └── Chronova/
-├── index.html
-├── mycart.html
-└── return.html
+    ├── index.html
+    ├── mycart.html
+    └── return.html
+
 
 ## 🧩 Pages Overview
 
