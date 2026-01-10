@@ -1,6 +1,6 @@
 # ⏳ Chronova
 
-Chronova is a front-end web project designed to simulate an e-commerce experience using pure HTML (and supporting CSS/JavaScript if included). The project focuses on product browsing, cart management, and return handling through multiple interconnected pages.
+Chronova is a front-end web project designed to simulate an e-commerce experience using pure HTML and supporting CSS/JavaScript. The project focuses on product browsing, cart management, and return handling through multiple interconnected pages.
 
 ## 🧩 Pages Overview
 
