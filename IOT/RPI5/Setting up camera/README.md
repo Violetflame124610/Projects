@@ -46,7 +46,7 @@ Bus 001 Device 005: ID 046d:0825 Logitech, Inc. Webcam C270
 
 Since I am using a Logitech camera it will be showing as Logitech, Inc. Webcam C270
 <br>
-then enter the below command to install the motion software.
+Then enter the below command to install the motion software.
 
 ```bash
 sudo apt-get install motion
@@ -69,6 +69,7 @@ Make sure these things are correct as oer the given table
 - width-640
 - height-480
 - post_capture-5
+<br>
 Click ctrl+x and press y to save and enter to confirm and exit.
 
 ## Start the server
