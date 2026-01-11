@@ -22,7 +22,10 @@ Steps to be done to know your rpi's address(IF you know your RPI's IP address th
 - after your rpi turns on your rpi os will appear
 - connect your rpi to the wi-fi
 - then go to turminal
-- enter the following command "ifconfig"
+enter the following command
+```bash
+ifconfig
+```
 - your ip will appear there, for example-192.168.0.1(The last 2 numbers may change)
 - note down or rember that ip
 
