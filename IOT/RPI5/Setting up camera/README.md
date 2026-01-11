@@ -21,13 +21,12 @@ Steps to be done to know your rpi's address(IF you know your RPI's IP address th
 - connect your hdmi port to your monitors port and power on your rpi
 - after your rpi turns on your rpi os will appear
 - connect your rpi to the wi-fi
-- then go to turminal
-enter the following command
+- then go to turminal,enter the following command
 ```bash
 ifconfig
 ```
 - your ip will appear there, for example-192.168.0.1(The last 2 numbers may change)
-- note down or rember that ip
+- note down or remember that ip
 
 ## Choose your way to operate(SSH or Direct through HDMI)
 If you are choosing to direct hdmi then you can continue the same way or else if you are choosing ssh you can control your rpi remotely through putty or any other alternatives of putty.I will be using mobaxterm for smooth flow experince as compared to putty.Now, to connect through ssh you must enter your ip address that you had noted down in the red circle as shown below in putty.
