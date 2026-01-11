@@ -31,7 +31,7 @@ ifconfig
 ## Choose your way to operate(SSH or Direct through HDMI)
 If you are choosing to direct hdmi then you can continue the same way or else if you are choosing ssh you can control your rpi remotely through putty or any other alternatives of putty.I will be using mobaxterm for smooth flow experince as compared to putty.Now, to connect through ssh you must enter your ip address that you had noted down in the red circle as shown below in putty.
 <br>
-<img width="600" height="540" alt="Screenshot 2026-01-11 173801" src="https://github.com/user-attachments/assets/42120a9a-c322-4fe8-aba7-7d0ec36d4fd5" / ><br>
+<img width="600" height="540" alt="Screenshot 2026-01-11 173801" src="https://github.com/user-attachments/assets/42120a9a-c322-4fe8-aba7-7d0ec36d4fd5/" ><br>
 Select connection type as ssh and click open.A new window opens up now enter your username and password that u had used during setting up of raspberry pi.
 
 ## Installation of Softwares
