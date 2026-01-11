@@ -86,5 +86,5 @@ sudo motion
 
 ## Viewing the camera
 To view it enter the syntax mentioned above that u read
-ip-the number you noted
-port-8081
+- ip-the number you noted
+- port-8081
