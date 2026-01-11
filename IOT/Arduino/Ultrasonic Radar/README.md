@@ -8,11 +8,9 @@ This Projects helps in building an ultrasonic radar which teaches fundamental pr
 - Breadboard
 - Jumper Wires
 - USB cable for injecting of code to arduino
-- 
 ## Applicaions we will be using
 - Arduino IDE
 - Processing 3
-- 
 ## Circuit
 Connect your components as shown below in the cirucit diagram.
 <img width="734" height="588" alt="Screenshot 2026-01-11 190635" src="https://github.com/user-attachments/assets/af8ab46d-4fa9-4ac1-ad39-d1e8b4bcaf7b" />
